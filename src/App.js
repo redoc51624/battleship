@@ -8,9 +8,7 @@ class App extends Component {
     super(props);
      
   }
-render: function () {
-   var rows = [], i = 0, len = 10;
-  while (++i <= len) rows.push(i);
+  render() {
     return (
       <div className="App">
         <div className="App-header">
