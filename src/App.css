@@ -1,0 +1,89 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+     height: 150px;
+    position: absolute;
+    background: #00225E;
+    width: 100%;
+}
+.banner{
+  width: 100%;
+  height: 250px;
+}
+.header{
+   font-size: 36px;
+   font-weight: bold;
+       font-family: -webkit-pictograph;
+      width: 100px;
+    height: 100px;
+    position: relative;
+    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+    -webkit-animation-direction: alternate; /* Safari 4.0 - 8.0 */
+    animation-name: example;
+    animation-duration: 17s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;  
+}
+
+@-webkit-keyframes example {
+    0%   {color:magenta; left:0px; top:0px;}
+    25%  {color:yellow; left:1200px; top:0px;}
+    50%  {color:brown; left:1200px; top:50px;}
+    75%  {color:grey; left:0px; top:0px;}
+    100% {color:magenta ; left:0px; top:0px;}
+}
+
+@keyframes example {
+    0%   {color:magenta; left:0px; top:0px;}
+    25%  {color:yellow; left:1200px; top:0px;}
+    50%  {color:brown; left:1200px; top:0px;}
+    75%  {color:grey; left:0px; top:0px;}
+    100% {color:magenta; left:0px; top:0px;}
+}
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.container{
+  width:100%;
+  height: 550px;
+  position: relative;
+  background-image: url("https://cmn-group.com/wp-content/uploads/2014/09/FS56_CAM.png");
+}
+
+.rightContainer{
+  width: 500px;
+  height: 500px;
+  background: white;
+  margin: 40px 100px;
+  float: right;
+  display: inline-block;
+}
+.leftContainer {
+  width: 500px;
+  height: 500px;  
+  background: white;
+  margin: 40px 100px;
+  float: left;
+  display: inline-block;
+}
+input[type="checkbox" i] {
+  width: 20px;
+}
+.inputGrid{
+
+}
