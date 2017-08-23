@@ -3,7 +3,14 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
-  render() {
+
+  constructor(props) {
+    super(props);
+     
+  }
+render: function () {
+   var rows = [], i = 0, len = 10;
+  while (++i <= len) rows.push(i);
     return (
       <div className="App">
         <div className="App-header">
@@ -22,7 +29,13 @@ class App extends Component {
               </div>
               <div className="rightContainer">
                 <h2>BattleField</h2>
-                  ships
+                 <div className="shipTypes">
+                      <ul>
+                          <li className="shipList"><div className="shipName">Destroyer</div><div className="shipBlock"/><div className="shipBlock"/><div className="shipBlock"/></li>
+                          <li className="shipList"><div  className="shipName">Artillary Ship</div><div className="shipBlock"/><div className="shipBlock"/></li>
+                          <li className="shipList"><div className="shipName">Survey Boat</div><div className="shipBlock"/></li>
+                      </ul>
+                 </div>
               </div>
         </div>
       </div>

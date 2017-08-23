@@ -72,6 +72,7 @@
   margin: 40px 100px;
   float: right;
   display: inline-block;
+  opacity: 0.8;
 }
 .leftContainer {
   width: 500px;
@@ -80,10 +81,37 @@
   margin: 40px 100px;
   float: left;
   display: inline-block;
+  opacity: 0.8;
 }
 input[type="checkbox" i] {
   width: 20px;
 }
 .inputGrid{
 
+}
+
+
+/*ship css*/
+.shipName{
+  display: inline-block;
+  margin: auto 20px;
+  float: right;
+}
+.shipBlock{
+  width: 30px;
+  height: 30px;
+  border: 2px solid grey;
+  background: brown;
+  display: inline-block;
+  float: left;
+}
+.shipList{
+    margin: 20px;
+    width: 280px;
+    position: relative;
+    color: brown;
+    font-weight: 900;
+    height: 34px;
+    list-style: none;
+    border: 1px solid grey;
 }
