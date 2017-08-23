@@ -18,10 +18,10 @@
   height: 250px;
 }
 .header{
-    font-size: 25px;
-    margin: 0;
+    font-size: 60px;
+    margin: 0 40%;
     padding-top: 10px;
-    font-weight: bold;
+    font-weight: 800;
     font-family: -webkit-pictograph;
     width: 100px;
     height: 100px;
@@ -38,19 +38,19 @@
 }
 
 @-webkit-keyframes example {
-    0%   {color:magenta; left:0px; top:0px;}
-    25%  {color:yellow; left:1200px; top:0px;}
-    50%  {color:brown; left:1200px; top:50px;}
-    75%  {color:grey; left:0px; top:0px;}
-    100% {color:magenta ; left:0px; top:0px;}
+    0%   {color:magenta}
+    25%  {color:yellow; }
+    50%  {color:brown; }
+    75%  {color:grey; }
+    100% {color:magenta }
 }
 
 @keyframes example {
-    0%   {color:magenta; left:0px; top:0px;}
-    25%  {color:yellow; left:1200px; top:0px;}
-    50%  {color:brown; left:1200px; top:0px;}
-    75%  {color:grey; left:0px; top:0px;}
-    100% {color:magenta; left:0px; top:0px;}
+    0%   {color:magenta; }
+    25%  {color:yellow; }
+    50%  {color:brown;}
+    75%  {color:grey;}
+    100% {color:magenta;}
 }
 .App-intro {
   font-size: large;
@@ -65,6 +65,7 @@
   width:100%;
   height: 600px;
   position: relative;
+  background-color: azure;
   background-image: url("https://cmn-group.com/wp-content/uploads/2014/09/FS56_CAM.png");
 }
 
@@ -86,8 +87,25 @@
   display: inline-block;
   opacity: 0.8;
 }
-input[type="checkbox" i] {
-  width: 20px;
+
+/*matrix css*/
+.matrix{
+    margin: 40px 83px;
+    padding: 10px;
+    width: 90%;
+}
+.matrixGrid {
+    width: 50px;
+    height: 50px;
+    background: blue;
+    float: left;
+    border: 2px solid brown;
+}
+.matrixRow{
+  width: 80%;
+}
+.selected{
+    background: red;
 }
 .inputGrid{
 
@@ -117,4 +135,7 @@ input[type="checkbox" i] {
     height: 34px;
     list-style: none;
     border: 1px solid grey;
+}
+.shipTypes{
+    margin: 100px 50px;
 }
