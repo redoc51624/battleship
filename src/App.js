@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
@@ -57,16 +56,14 @@ class App extends Component {
       this.plotShip = this.plotShip.bind(this)
   }
 
-  shipSelected(n) {
+  shipSelected(event, n) {
     var len= n;
     console.log(len);
-    this.setState(prevState => ({
-       // currentShipLen: len;
-    }));
+
   }
 
-  plotShip(){
-
+  plotShip(event,data){
+      console.log(event.target);
   }
 
   render() {
@@ -93,7 +90,7 @@ class App extends Component {
                          {Array.apply(null, Array(6)).map(function(item, j){                                        
                          return (
                           <div>
-                                 <div id={j} className="matrixGrid" onClick={this.plotShip()}></div>
+                                 <div id={j} className="matrixGrid" onClick={this.plotShip(this, j)} value={this.state.userShipPlotArr[j].plotStatus}></div>
                             </div>
                            );                
                         }, this)} 
@@ -109,9 +106,9 @@ class App extends Component {
                 <h2>Battleships</h2>
                  <div className="shipTypes">
                       <ul>
-                          <li className="shipList" onClick={this.shipSelected(3)}><div id="3" className="shipName">Destroyer</div><div className="shipBlock"/><div className="shipBlock"/><div className="shipBlock"/></li>
-                          <li className="shipList" onClick={this.shipSelected(2)}><div id="2" className="shipName">Artillary Ship</div><div className="shipBlock"/><div className="shipBlock"/></li>
-                          <li className="shipList" onClick={this.shipSelected(1)}><div id="1" className="shipName">Survey Boat</div><div className="shipBlock"/></li>
+                          <li className="shipList" onClick={this.shipSelected(this, 3)}><div id="3" className="shipName">Destroyer</div><div className="shipBlock"/><div className="shipBlock"/><div className="shipBlock"/></li>
+                          <li className="shipList" onClick={this.shipSelected(this, 2)}><div id="2" className="shipName">Artillary Ship</div><div className="shipBlock"/><div className="shipBlock"/></li>
+                          <li className="shipList" onClick={this.shipSelected(this, 1)}><div id="1" className="shipName">Survey Boat</div><div className="shipBlock"/></li>
                       </ul>
                  </div>
               </div>
