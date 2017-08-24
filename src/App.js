@@ -8,10 +8,69 @@ class App extends Component {
     super(props);
       this.state = {
         date: new Date(),
-        arr: []
+        currentShipLen: 3,
+        userShipPlotArr: [
+        {id: '1', plotStatus:0 ,shipStatus:'working'},
+        {id: '2', plotStatus:0 ,shipStatus:'working'},
+        {id: '3', plotStatus:0 ,shipStatus:'working'},
+        {id: '4', plotStatus:0 ,shipStatus:'working'},
+        {id: '5', plotStatus:0 ,shipStatus:'working'},
+        {id: '6', plotStatus:0 ,shipStatus:'working'},
+
+        {id: '1', plotStatus:0 ,shipStatus:'working'},
+        {id: '2', plotStatus:0 ,shipStatus:'working'},
+        {id: '3', plotStatus:0 ,shipStatus:'working'},
+        {id: '4', plotStatus:0 ,shipStatus:'working'},
+        {id: '5', plotStatus:0 ,shipStatus:'working'},
+        {id: '6', plotStatus:0 ,shipStatus:'working'},
+
+        {id: '1', plotStatus:0 ,shipStatus:'working'},
+        {id: '2', plotStatus:0 ,shipStatus:'working'},
+        {id: '3', plotStatus:0 ,shipStatus:'working'},
+        {id: '4', plotStatus:0 ,shipStatus:'working'},
+        {id: '5', plotStatus:0 ,shipStatus:'working'},
+        {id: '6', plotStatus:0 ,shipStatus:'working'},
+
+        {id: '1', plotStatus:0 ,shipStatus:'working'},
+        {id: '2', plotStatus:0 ,shipStatus:'working'},
+        {id: '3', plotStatus:0 ,shipStatus:'working'},
+        {id: '4', plotStatus:0 ,shipStatus:'working'},
+        {id: '5', plotStatus:0 ,shipStatus:'working'},
+        {id: '6', plotStatus:0 ,shipStatus:'working'},
+
+        {id: '1', plotStatus:0 ,shipStatus:'working'},
+        {id: '2', plotStatus:0 ,shipStatus:'working'},
+        {id: '3', plotStatus:0 ,shipStatus:'working'},
+        {id: '4', plotStatus:0 ,shipStatus:'working'},
+        {id: '5', plotStatus:0 ,shipStatus:'working'},
+        {id: '6', plotStatus:0 ,shipStatus:'working'},
+
+        {id: '1', plotStatus:0 ,shipStatus:'working'},
+        {id: '2', plotStatus:0 ,shipStatus:'working'},
+        {id: '3', plotStatus:0 ,shipStatus:'working'},
+        {id: '4', plotStatus:0 ,shipStatus:'working'},
+        {id: '5', plotStatus:0 ,shipStatus:'working'},
+        {id: '6', plotStatus:0 ,shipStatus:'working'},
+        ]
       };
+      this.shipSelected = this.shipSelected.bind(this);
+      this.plotShip = this.plotShip.bind(this)
   }
+
+  shipSelected(n) {
+    var len= n;
+    console.log(len);
+    this.setState(prevState => ({
+       // currentShipLen: len;
+    }));
+  }
+
+  plotShip(){
+
+  }
+
   render() {
+
     return (
       <div className="App">
         <div className="App-header">
@@ -34,7 +93,7 @@ class App extends Component {
                          {Array.apply(null, Array(6)).map(function(item, j){                                        
                          return (
                           <div>
-                                 <div className="selected matrixGrid"></div>
+                                 <div id={j} className="matrixGrid" onClick={this.plotShip()}></div>
                             </div>
                            );                
                         }, this)} 
@@ -44,13 +103,15 @@ class App extends Component {
                 }, this)} 
                   </div>
               </div>
+
+
               <div className="rightContainer">
                 <h2>Battleships</h2>
                  <div className="shipTypes">
                       <ul>
-                          <li className="shipList" onclick=""><div className="shipName">Destroyer</div><div className="shipBlock"/><div className="shipBlock"/><div className="shipBlock"/></li>
-                          <li className="shipList"><div  className="shipName">Artillary Ship</div><div className="shipBlock"/><div className="shipBlock"/></li>
-                          <li className="shipList"><div className="shipName">Survey Boat</div><div className="shipBlock"/></li>
+                          <li className="shipList" onClick={this.shipSelected(3)}><div id="3" className="shipName">Destroyer</div><div className="shipBlock"/><div className="shipBlock"/><div className="shipBlock"/></li>
+                          <li className="shipList" onClick={this.shipSelected(2)}><div id="2" className="shipName">Artillary Ship</div><div className="shipBlock"/><div className="shipBlock"/></li>
+                          <li className="shipList" onClick={this.shipSelected(1)}><div id="1" className="shipName">Survey Boat</div><div className="shipBlock"/></li>
                       </ul>
                  </div>
               </div>

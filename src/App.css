@@ -27,12 +27,12 @@
     height: 100px;
     position: relative;
     -webkit-animation-name: example;
-    -webkit-animation-duration: 1s;
+    -webkit-animation-duration: 2s;
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-direction: alternate;
     animation-name: example;
-    -webkit-animation-duration: 17s;
-    animation-duration: 17s;
+    -webkit-animation-duration: 5s;
+    animation-duration: 5s;
     animation-iteration-count: infinite;
     animation-direction: alternate; 
 }
@@ -73,7 +73,7 @@
   width: 500px;
   height: 500px;
   background: white;
-  margin: 40px 100px;
+  margin: 60px 150px 60px 100px;
   float: right;
   display: inline-block;
   opacity: 0.8;
@@ -82,7 +82,7 @@
   width: 500px;
   height: 500px;  
   background: white;
-  margin: 40px 100px;
+  margin:60px 0px 60px 150px;
   float: left;
   display: inline-block;
   opacity: 0.8;
@@ -97,9 +97,13 @@
 .matrixGrid {
     width: 50px;
     height: 50px;
-    background: blue;
+    background: aquamarine;
     float: left;
-    border: 2px solid brown;
+    border: 2px solid cadetblue;
+}
+.matrixGrid:hover{
+  cursor: pointer;
+  opacity: 0.5;
 }
 .matrixRow{
   width: 80%;
@@ -118,6 +122,7 @@
   margin: auto 20px;
   float: right;
 }
+
 .shipBlock{
   width: 30px;
   height: 30px;
@@ -126,8 +131,19 @@
   display: inline-block;
   float: left;
 }
+.shipList:hover{
+    cursor: pointer;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(0.5);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.07);   
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.07);
+    transition: all 200ms ease-in;
+    transform: scale(1.07);
+}
 .shipList{
-    margin: 20px;
+    margin: 50px 25px;
     width: 280px;
     position: relative;
     color: brown;
@@ -138,4 +154,7 @@
 }
 .shipTypes{
     margin: 100px 50px;
+}
+.disableShip{
+
 }
