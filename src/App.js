@@ -87,7 +87,7 @@ class App extends Component {
                          return (
                           <div>
                                  <div id={j} className="matrixGrid" 
-                                 onClick={() => this.plotShip(this, j)}
+                                 onClick={() => this.plotShip(this, i,j)}
                                  value={this.state.userShipPlotArr[j].plotStatus}></div>
                             </div>
                            );                
@@ -135,8 +135,9 @@ class App extends Component {
     ship.style.display = "none";
   }
 
-  plotShip(event,data){
-      console.log("plot data: "+event.target+ data);
+  plotShip(event, x, y){
+      console.log("plot data: "+event.target+ "xy: "+x+y);
+      this.setState({ currentShipLen: y });
 
   }
   onClick() {
