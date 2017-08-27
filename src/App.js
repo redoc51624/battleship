@@ -10,7 +10,7 @@ class App extends Component {
         date: new Date(),
         page1: true,
         page2: false,
-        currentShipLen: 3,
+        currentShipLen: 1,
         userShipPlotArr: [
         {id: '00', plotStatus:0 ,shipStatus:'0'},
         {id: '01', plotStatus:0 ,shipStatus:'0'},
@@ -86,7 +86,7 @@ class App extends Component {
                          {Array.apply(null, Array(6)).map(function(item, j){                                        
                          return (
                           <div>
-                                 <div id={j} className="matrixGrid" 
+                                 <div id= {i+''+j} className="matrixGrid" 
                                  onClick={() => this.plotShip(this, i,j)}
                                  value={this.state.userShipPlotArr[j].plotStatus}></div>
                             </div>
@@ -129,15 +129,27 @@ class App extends Component {
   }
   shipSelected(event, n) {
     var id = n;
-    console.log("shipSelected data: "+event.target+ ": "+id);
     var ship = document.getElementById(id);
-    console.log("ship: "+ship.value);
     ship.style.display = "none";
+    console.log("shipSelected data: "+event.target+ ": "+id);
+    console.log("ship: "+ship.value);  
   }
 
   plotShip(event, x, y){
-      console.log("plot data: "+event.target+ "xy: "+x+y);
-      this.setState({ currentShipLen: y });
+    var gridId = "" + x + y;
+    var shipLen = this.state.currentShipLen;
+    console.log("shiplength: "+ shipLen);
+    console.log("plot data: "+event.target+ "xy: "+x+y + "gridId: "+ gridId);
+
+    this.setState({ currentShipLen: y }); 
+
+   // this.setState({ userShipPlotArr[gridId].plotStatus: 1,
+    //                 userShipPlotArr[gridId].shipStatus: 1, 
+    //               });
+
+    var gridShip = document.getElementById(gridId);
+    console.log(gridShip);
+    gridShip.style.display = "none";
 
   }
   onClick() {
