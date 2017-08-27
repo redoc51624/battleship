@@ -177,3 +177,17 @@
     float: left;
     border: 2px solid cadetblue;
   }
+  .btn{
+    width: 90px;
+    height: 22px;
+    position: relative;
+    color: white;
+    left: 50%;
+    font-size: 15px;
+    border-radius: 3px;
+    background: grey;
+    cursor: pointer;
+  }
+  .btn:hover{
+    color: aceblue;
+  }

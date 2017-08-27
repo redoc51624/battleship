@@ -8,7 +8,7 @@ class App extends Component {
     super(props);
       this.state = {
         date: new Date(),
-        page1: false,
+        page1: true,
         page2: false,
         currentShipLen: 3,
         userShipPlotArr: [
@@ -63,12 +63,13 @@ class App extends Component {
       <div className="App">
         <div className="App-header">
         </div>
-        <h2 className="header">
-          BATTLESHIP
-        </h2>
+          <h2 className="header">
+            BATTLESHIP
+          </h2>
+          <div className="btn" onClick={() => this.onClick()}>Switch Page</div>
         <p className="App-intro">
-
         </p>
+        
       {this.state.page1
           ? 
         <div className="container">
@@ -137,6 +138,9 @@ class App extends Component {
   plotShip(event,data){
       console.log("plot data: "+event.target+ data);
 
+  }
+  onClick() {
+    this.setState({ page1: !this.state.page1 });
   }
 
 }
